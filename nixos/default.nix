@@ -20,6 +20,7 @@
       {
         name = "origin";
         url = "https://github.com/kuseler/kimis-nix-setup.git";
+	branches.main.name = "master"; # Make sure this matches your git branch!
       }
     ];
   };
@@ -48,7 +49,7 @@
   # Use latest kernel.
   boot.kernelPackages = pkgs.linuxPackages_latest;
   hardware.enableRedistributableFirmware = true;
-  # networking.hostName = "nixos"; # Define your hostname.
+  networking.hostName = "homelab"; # Define your hostname.
   # Pick only one of the below networking options.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
   # networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
