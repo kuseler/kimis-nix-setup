@@ -127,6 +127,7 @@ users.users.kimi = {
     zip
     tree
     zsh		  # terminal
+    wget
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
