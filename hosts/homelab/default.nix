@@ -20,6 +20,7 @@
 
   environment.systemPackages = with pkgs; [ 
   k3s 
+  helm
   fluxcd
   ];
 }
