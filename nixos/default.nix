@@ -129,6 +129,7 @@ users.users.kimi = {
     tree
     zsh		  # terminal
     wget
+    k9s
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
