@@ -18,8 +18,8 @@
   networking.firewall.allowedUDPPorts = [ 8472 ];
   networking.hostName = "homelab";
 
-  environment.systemPackages = [ 
-  pkgs.k3s 
+  environment.systemPackages = with pkgs; [ 
+  k3s 
   fluxcd
   ];
 }
