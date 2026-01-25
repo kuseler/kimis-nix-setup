@@ -11,6 +11,7 @@
     # Makes the kubeconfig readable so you don't always need sudo for kubectl
     extraFlags = toString [
       "--write-kubeconfig-mode 644"
+      "--tls-san=homelab.fritz.box"
     ];
   };
 
