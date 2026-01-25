@@ -20,7 +20,8 @@
   networking.hostName = "homelab";
 
   environment.systemPackages = with pkgs; [ 
-  k3s 
+  k3s
+  nfs-utils
   fluxcd
   (wrapHelm kubernetes-helm {
         plugins = with pkgs.kubernetes-helmPlugins; [
