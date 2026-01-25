@@ -23,7 +23,15 @@
       fsType = "vfat";
       options = [ "fmask=0022" "dmask=0022" ];
     };
+  fileSystems."/export/nas" = {
+    device = "/mnt/nas";
+    options = [ "bind" ];
+  };
 
+  services.nfs.server.enable = true;
+  services.nfs.server.exports = ''
+    /export/nas         nas.fritz.box(rw,fsid=0,no_subtree_check) 
+  '';
   swapDevices = [ ];
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
