@@ -113,6 +113,7 @@ users.users.kimi = {
   # List packages installed in system profile.
   # You can use https://search.nixos.org/ to find more packages (and options).
   environment.systemPackages = with pkgs; [
+    github-copilot-cli
     gemini-cli
     neofetch      # system info summary
     btop          # modern, visually rich resource monitor
