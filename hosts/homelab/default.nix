@@ -12,6 +12,9 @@
     extraFlags = toString [
       "--write-kubeconfig-mode 644"
       "--tls-san=homelab.fritz.box"
+      "--cluster-cidr=10.42.0.0/16,fd00:42::/56" 
+      "--service-cidr=10.43.0.0/16,fd00:43::/112"
+      "--flannel-ipv6=true"
     ];
   };
 
