@@ -109,7 +109,9 @@ users.users.kimi = {
 };
 
   # programs.firefox.enable = true;
-
+  nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
+    "github-copilot-cli"
+  ];
   # List packages installed in system profile.
   # You can use https://search.nixos.org/ to find more packages (and options).
   environment.systemPackages = with pkgs; [
